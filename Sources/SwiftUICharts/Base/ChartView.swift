@@ -7,6 +7,8 @@ public struct ChartView: View {
     @Environment(\.chartType) private var chartType
     @Environment(\.chartStyle) private var chartStyle
 
+    //@ObservedObject var model: Datable
+    
     private var configuration: ChartTypeConfiguration
 
     public var body: some View {
@@ -19,3 +21,4 @@ extension ChartView {
         self.configuration = ChartTypeConfiguration(data: data)
     }
 }
+

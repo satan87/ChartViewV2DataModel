@@ -1,12 +1,15 @@
 import SwiftUI
 
+//public struct BarChart: ChartType {
 public struct BarChart: ChartType {
-    public func makeChart(configuration: Self.Configuration, style: Self.Style) -> some View {
-        BarChartRow(data: configuration.data, style: style)
+    
+    public func makeChart(configuration: Self.ForData, style: Self.Style) -> some View {
+        BarChartRow(model: configuration, style: style)
     }
     public init() {}
 }
 
+/*
 struct BarChart_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -28,3 +31,4 @@ struct BarChart_Previews: PreviewProvider {
         }
     }
 }
+*/
